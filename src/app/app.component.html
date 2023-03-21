@@ -1,0 +1,48 @@
+
+
+
+<!-- abréviation Emmet -->
+<header class="fixed-top">
+  <app-header></app-header>
+
+  <!-- ajouter un bouton -->
+  <button (click)='onClick()'>
+    <app-icon-close *ngIf='!open'></app-icon-close>
+    <app-icon-nav *ngIf='open'></app-icon-nav>
+  </button>
+
+  <!-- afficher une icône -->
+
+
+  <!-- btn.addEventListener('click', function(){}) -->
+
+
+</header>
+<!-- Ici on alterne la classe close-aside en fonction de la valeur de open -->
+<main [ngClass]="{'close-aside' : open}">
+  <div class="shadow position-fixed">
+  </div>
+  <aside>
+    <div class="scroller">
+      <!-- instance de nav -->
+      <!-- mettre directement des liens -->
+      <app-nav></app-nav>
+    </div>
+  </aside>
+  <div class="page">
+    <div class="contents">
+
+      <!-- ici composants dynamiques -->
+      <!-- instance de router-outlet -->
+      <!-- ici affichage de page-list-orders ou edit-order ou add-order -->
+      <!-- ici affichage du component list-orders ou d'un autre componant -->
+      <router-outlet></router-outlet>
+      <!--  -->
+    </div>
+    <footer>
+      <!-- instance de footer -->
+      <app-footer></app-footer>
+    </footer>
+  </div>
+</main>
+
