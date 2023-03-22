@@ -11,16 +11,16 @@ export class BtnComponent implements OnInit{
   @Input() route!: string;
 
   constructor() {
-    console.log(this.label, 'depuis constructor'); // ?? undefined
+    //console.log(this.label, 'depuis constructor'); // ?? undefined
   }
 
   // déclenchée une seule fois
   ngOnInit() {
-    console.log(this.label, 'depuis oninit'); // ?? undefined
+    //console.log(this.label, 'depuis oninit'); // ?? undefined
   }
 
   // déclenchée plusieurs fois
   ngOnChanges() {
-    console.log(this.label, 'depuis onChanges'); // ?? undefined
+    //console.log(this.label, 'depuis onChanges'); // ?? undefined
   }
 }

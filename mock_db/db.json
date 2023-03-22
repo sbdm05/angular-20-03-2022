@@ -2,7 +2,7 @@
   "orders": [
     {
       "tjmHt": 1200,
-      "nbJours": 20,
+      "nbJours": 5,
       "tva": 20,
       "state": "CONFIRMED",
       "typePresta": "Dév2023",
@@ -12,11 +12,11 @@
     },
     {
       "tjmHt": 1200,
-      "nbJours": 10,
-      "tva": 20,
+      "nbJours": 4,
+      "tva": 23,
       "state": "OPTION",
       "typePresta": "formation",
-      "client": "Modis",
+      "client": "Modis2023",
       "comment": "fgddhf",
       "id": 2
     },

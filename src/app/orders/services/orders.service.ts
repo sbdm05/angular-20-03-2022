@@ -24,4 +24,16 @@ export class OrdersService {
   public add(obj: Order): Observable<Order> {
     return this.http.post<Order>('http://localhost:3000/orders', obj);
   }
+
+  // méthode getItemById()
+  public getItemById(id: number): Observable<Order> {
+    return this.http.get<Order>(`http://localhost:3000/orders/${id}`);
+  }
+
+  // méthode update
+  // this.http.put(url/id, obj)
+  public update(obj: Order): Observable<Order>{
+    return this.http.put<Order>(`http://localhost:3000/orders/${obj.id}`, obj);
+  }
+
 }

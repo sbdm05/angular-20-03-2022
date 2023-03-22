@@ -14,7 +14,7 @@
   </thead>
   <tbody>
     <tr *ngFor='let i of data'>
-      <td><button>Editer</button></td>
+      <td><button (click)='goToEdit(i.id)'>Editer</button></td>
       <td>{{i.typePresta | uppercase}}</td>
       <td>{{i.client}}</td>
       <td>{{i.nbJours}}</td>

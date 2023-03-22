@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { StateOrder } from 'src/app/core/enums/state-order';
 import { Order } from 'src/app/core/models/order';
 
@@ -23,11 +23,24 @@ export class FormOrderComponent {
     console.log(this.init, 'objet complet du parent');
     this.form = this.fb.group({
       tjmHt: [this.init.tjmHt],
-      nbJours: [this.init.nbJours],
+      nbJours: [
+        this.init.nbJours,
+        [Validators.required, Validators.max(5)],
+      ],
       tva: [this.init.tva],
       state: [this.init.state],
-      typePresta: [this.init.typePresta],
-      client: [this.init.client],
+      typePresta: [
+        this.init.typePresta,
+        [Validators.required, Validators.minLength(5)],
+      ],
+      client: [
+        this.init.client,
+        [
+          Validators.required,
+          Validators.minLength(5),
+          Validators.maxLength(30),
+        ],
+      ],
       comment: [this.init.comment],
       id: [this.init.id],
     });

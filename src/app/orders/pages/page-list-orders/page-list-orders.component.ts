@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Order } from 'src/app/core/models/order';
 import { OrdersService } from '../../services/orders.service';
 
@@ -25,7 +26,7 @@ export class PageListOrdersComponent {
   // initialiser une variable globale
   public data!: Order[];
 
-  constructor(private ordersService: OrdersService) {
+  constructor(private ordersService: OrdersService, private router: Router) {
     // déclencher getDatas()
     this.ordersService.getDatas().subscribe((data) => {
       // console.log(data);
@@ -40,4 +41,10 @@ export class PageListOrdersComponent {
   // }
 
   // change detection
+
+
+  public goToEdit(id: number){
+    // rediriger vers la route edit/id
+    this.router.navigate(['edit', id ])
+  }
 }
