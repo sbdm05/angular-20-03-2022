@@ -1,6 +1,29 @@
 <!-- iterer dans data -->
-<ul>
+<!-- <ul>
   <li *ngFor='let i of data'>{{i.client}}</li>
 
-</ul>
+</ul> -->
 <!-- {{i.client}} -->
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th *ngFor="let i of headers" scope="col">{{i}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let i of data'>
+      <td><button>Editer</button></td>
+      <td>{{i.typePresta | uppercase}}</td>
+      <td>{{i.client}}</td>
+      <td>{{i.nbJours}}</td>
+      <td>{{i.tjmHt}}</td>
+      <td>{{i.tjmHt | total :i.nbJours | currency }}</td>
+      <td>{{i.tjmHt | total :i.nbJours :i.tva | currency }}</td>
+      <td>{{i.state}}</td>
+    </tr>
+<!-- string interpolation -->
+<!-- pipe currency -->
+  </tbody>
+</table>

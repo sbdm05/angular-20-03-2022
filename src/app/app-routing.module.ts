@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule, Router } from '@angular/router';
 import { PageListOrdersComponent } from './orders/pages/page-list-orders/page-list-orders.component';
 import { PageAddOrderComponent } from './orders/pages/page-add-order/page-add-order.component';
-
+import { PageDemoObservableFroidComponent } from './orders/pages/page-demo-observable-froid/page-demo-observable-froid.component';
 
 const routes: Routes = [
   // lazy loading = ne pas charger ses composants inutilement
@@ -13,6 +13,7 @@ const routes: Routes = [
 
   { path: '', component: PageListOrdersComponent },
   { path: 'add', component: PageAddOrderComponent },
+  { path: 'demo', component: PageDemoObservableFroidComponent },
   {
     path: '**',
     loadChildren: () =>
@@ -24,14 +25,11 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    RouterModule.forRoot(routes)
-  ],
-  exports: [RouterModule]
+  imports: [CommonModule, RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
 export class AppRoutingModule {
-  constructor(private router: Router){
-    console.log(this.router.config, 'tableau de routes')
+  constructor(private router: Router) {
+    console.log(this.router.config, 'tableau de routes');
   }
 }

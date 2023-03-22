@@ -10,6 +10,18 @@ import { OrdersService } from '../../services/orders.service';
 export class PageListOrdersComponent {
   public title: string = 'CRM';
 
+  // tableau de headers
+  public headers: string[] = [
+    'Action',
+    'Type',
+    'Client',
+    'NbJours',
+    'Tjm HT',
+    'Total HT',
+    'Total TTC',
+    'State',
+  ];
+
   // initialiser une variable globale
   public data!: Order[];
 
@@ -20,4 +32,12 @@ export class PageListOrdersComponent {
       this.data = data;
     });
   }
+
+  // public total(val: number, coef: number, tva ?: number){
+  //   console.log('déclenché')
+  //   if (tva) return val * coef * (1 + tva / 100);
+  //   return val * coef;
+  // }
+
+  // change detection
 }
