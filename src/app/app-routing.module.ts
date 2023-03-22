@@ -1,26 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, Router } from '@angular/router';
 import { PageListOrdersComponent } from './orders/pages/page-list-orders/page-list-orders.component';
 import { PageAddOrderComponent } from './orders/pages/page-add-order/page-add-order.component';
-import { PageNotFoundComponent } from './page-not-found/components/page-not-found/page-not-found.component';
+
 
 const routes: Routes = [
-  {path: '', component: PageListOrdersComponent},
-  {path: 'add', component: PageAddOrderComponent},
-
   // lazy loading = ne pas charger ses composants inutilement
   // mais uniquement si l'utilisateur visite la route
   // {path : '**', component : PageNotFoundComponent}
+  // wildcard
+
+  { path: '', component: PageListOrdersComponent },
+  { path: 'add', component: PageAddOrderComponent },
   {
     path: '**',
-    loadChildren: ()=>
+    loadChildren: () =>
       import('./page-not-found/page-not-found.module').then(
         (m) => m.PageNotFoundModule
-      )
-  }
-
-]
+      ),
+  },
+];
 
 @NgModule({
   declarations: [],
@@ -30,4 +30,8 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+  constructor(private router: Router){
+    console.log(this.router.config, 'tableau de routes')
+  }
+}

@@ -8,13 +8,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './shared/shared.module';
 import { OrdersModule } from './orders/orders.module';
 import { AppRoutingModule } from './app-routing.module';
-import { IconsModule } from './icons/icons.module';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent
-
   ],
   imports: [
     BrowserModule,
@@ -22,7 +20,8 @@ import { IconsModule } from './icons/icons.module';
     NgbModule,
     SharedModule,
     OrdersModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
