@@ -5,6 +5,8 @@ import { PageEditOrderComponent } from './pages/page-edit-orders/page-edit-order
 import { PageAddOrderComponent } from './pages/page-add-order/page-add-order.component';
 import { PageDemoObservableFroidComponent } from './pages/page-demo-observable-froid/page-demo-observable-froid.component';
 import { SharedModule } from '../shared/shared.module';
+import { FormOrderComponent } from './components/form-order/form-order.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,8 +15,9 @@ import { SharedModule } from '../shared/shared.module';
     PageEditOrderComponent,
     PageAddOrderComponent,
     PageDemoObservableFroidComponent,
+    FormOrderComponent,
   ],
-  imports: [CommonModule, SharedModule],
+  imports: [CommonModule, SharedModule, ReactiveFormsModule],
   providers: [{ provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR' }],
   exports: [
     PageAddOrderComponent,
