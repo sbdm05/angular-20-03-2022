@@ -1,6 +1,4 @@
-.title{
-  color: blueviolet;
-}
+
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +21,7 @@ main {
 }
 
 aside {
-  background: #bebdbd;
+  background: #d1d1d1;
   width: 250px;
   min-height: 100vh;
   position: fixed;
@@ -37,21 +35,20 @@ aside {
 }
 
 .close-aside aside {
-  width: 0;
-  overflow: hidden;
+  display: none;
 }
 
 .close-aside .shadow {
   display: none;
 }
 
-.shadow {
-  background: #525252;
-  opacity: 0.8;
-  width: 100%;
-  min-height: 100vh;
-  z-index: 1000;
-}
+// .shadow {
+//   background: #525252;
+//   opacity: 0.8;
+//   width: 100%;
+//   min-height: 100vh;
+//   z-index: 1000;
+// }
 
 .page {
   display: flex;
@@ -64,7 +61,7 @@ aside {
 }
 
 footer {
-  background: #f0d8ea;
+  background: #b8b8b8;
 }
 
 button {

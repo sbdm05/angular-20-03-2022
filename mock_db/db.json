@@ -24,7 +24,7 @@
       "tjmHt": 1200,
       "nbJours": 1,
       "tva": 20,
-      "state": "CANCELLED",
+      "state": "OPTION",
       "typePresta": "formation",
       "client": "Capgemini",
       "comment": null,
@@ -66,69 +66,9 @@
       "tva": 20,
       "state": "OPTION",
       "typePresta": "Formation",
-      "client": "fdsf",
+      "client": "Client 2",
       "comment": null,
       "id": 7
-    },
-    {
-      "tjmHt": 1200,
-      "nbJours": 1,
-      "tva": 20,
-      "state": "CONFIRMED",
-      "typePresta": "test",
-      "client": "Test",
-      "comment": null,
-      "id": 8
-    },
-    {
-      "tjmHt": 1200,
-      "nbJours": null,
-      "tva": 20,
-      "state": "OPTION",
-      "typePresta": "Formation",
-      "client": "Nouveau 14:25",
-      "comment": null,
-      "id": 9
-    },
-    {
-      "tjmHt": 1200,
-      "nbJours": 1,
-      "tva": 20,
-      "state": "OPTION",
-      "typePresta": null,
-      "client": "Client 50",
-      "comment": null,
-      "id": 10
-    },
-    {
-      "tjmHt": 1200,
-      "nbJours": 1,
-      "tva": 20,
-      "state": "OPTION",
-      "typePresta": null,
-      "client": null,
-      "comment": null,
-      "id": 11
-    },
-    {
-      "tjmHt": 1200,
-      "nbJours": 1,
-      "tva": 20,
-      "state": "OPTION",
-      "typePresta": null,
-      "client": null,
-      "comment": null,
-      "id": 12
-    },
-    {
-      "tjmHt": 1200,
-      "nbJours": 1,
-      "tva": 20,
-      "state": "OPTION",
-      "typePresta": null,
-      "client": null,
-      "comment": null,
-      "id": 13
     }
   ]
 }

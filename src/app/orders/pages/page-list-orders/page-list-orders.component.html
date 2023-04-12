@@ -5,8 +5,8 @@
 </ul> -->
 <!-- {{i.client}} -->
 
-
-<table class="table">
+<div class="container">
+  <table class="table">
   <thead>
     <tr>
       <th *ngFor="let i of headers" scope="col">{{i}}</th>
@@ -14,7 +14,8 @@
   </thead>
   <tbody>
     <tr *ngFor='let i of data'>
-      <td><button (click)='goToEdit(i.id)'>Editer</button></td>
+      <td><button class='btn btn-warning'(click)='goToEdit(i.id)'>Editer</button></td>
+      <!-- <td>Action</td> -->
       <td>{{i.typePresta | uppercase}}</td>
       <td>{{i.client}}</td>
       <td>{{i.nbJours}}</td>
@@ -30,7 +31,9 @@
   <!-- ici on ajoute un bouton pour redirection -->
   <app-btn
   label='Ajouter'
-  styleBtn='btn btn-secondary'
+  styleBtn='btn btn-success'
   route='/add'
   ></app-btn>
 </table>
+</div>
+
